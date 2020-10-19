@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab1 - API</title>
+    <link rel="stylesheet" type="text/css" href="../css/result.css">
+</head>
+<body>
+<div id="main-container">
+    <form method="get" th:action="@{/client/quiz}">
+            <p id="p1">Twój wynik to:</p>
+            <p id="p2" th:text="${wynik}+'/5'"></p>
+            <input id="check-button" type="submit" value="SPRÓBUJ JESZCZE RAZ">
+    </form>
+</div>
+</body>
+</html>

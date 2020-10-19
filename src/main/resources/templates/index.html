@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab1 - API</title>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+<body>
+<div id="main-container">
+    <div id="motto-box">
+        <form th:action="@{/client/motto}">
+            <input type="submit" value="MOTTO">
+        </form>
+    </div>
+    <hr>
+    <div id="quiz-box">
+        <form th:action="@{/client/quiz}">
+            <input type="submit" value="QUIZ">
+        </form>
+    </div>
+</div>
+</body>
+</html>
