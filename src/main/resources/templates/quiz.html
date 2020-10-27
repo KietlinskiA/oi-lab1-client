@@ -8,7 +8,7 @@
 <body>
 <div id="main-container">
     <form method="get" th:action="@{/client}">
-        <input id="menu-button" type="submit" value="MENU" >
+        <input id="menu-button" type="submit" value="MENU">
     </form>
     <form method="get" th:action="@{/client/checkAnswers}">
         <div class="question-box">
@@ -17,10 +17,10 @@
                 <input type="radio" id="answer1-0" name="question1" value="A" th:text="${questionList[0].getAnswer1()}">
             </label><br>
             <label for="answer2-0">
-                <input type="radio" id="answer2-0" name="question1" value="B"  th:text="${questionList[0].getAnswer2()}">
+                <input type="radio" id="answer2-0" name="question1" value="B" th:text="${questionList[0].getAnswer2()}">
             </label><br>
             <label for="answer3-0">
-                <input type="radio" id="answer3-0" name="question1" value="C"  th:text="${questionList[0].getAnswer3()}">
+                <input type="radio" id="answer3-0" name="question1" value="C" th:text="${questionList[0].getAnswer3()}">
             </label><br>
         </div>
         <div class="question-box">
@@ -29,10 +29,10 @@
                 <input type="radio" id="answer1-1" name="question2" value="A" th:text="${questionList[1].getAnswer1()}">
             </label><br>
             <label for="answer2-1">
-                <input type="radio" id="answer2-1" name="question2" value="B"  th:text="${questionList[1].getAnswer2()}">
+                <input type="radio" id="answer2-1" name="question2" value="B" th:text="${questionList[1].getAnswer2()}">
             </label><br>
             <label for="answer3-1">
-                <input type="radio" id="answer3-1" name="question2" value="C"  th:text="${questionList[1].getAnswer3()}">
+                <input type="radio" id="answer3-1" name="question2" value="C" th:text="${questionList[1].getAnswer3()}">
             </label><br>
         </div>
         <div class="question-box">
@@ -41,10 +41,10 @@
                 <input type="radio" id="answer1-2" name="question3" value="A" th:text="${questionList[2].getAnswer1()}">
             </label><br>
             <label for="answer2-2">
-                <input type="radio" id="answer2-2" name="question3" value="B"  th:text="${questionList[2].getAnswer2()}">
+                <input type="radio" id="answer2-2" name="question3" value="B" th:text="${questionList[2].getAnswer2()}">
             </label><br>
             <label for="answer3-2">
-                <input type="radio" id="answer3-2" name="question3" value="C"  th:text="${questionList[2].getAnswer3()}">
+                <input type="radio" id="answer3-2" name="question3" value="C" th:text="${questionList[2].getAnswer3()}">
             </label><br>
         </div>
         <div class="question-box">
@@ -53,10 +53,10 @@
                 <input type="radio" id="answer1-3" name="question4" value="A" th:text="${questionList[3].getAnswer1()}">
             </label><br>
             <label for="answer2-3">
-                <input type="radio" id="answer2-3" name="question4" value="B"  th:text="${questionList[3].getAnswer2()}">
+                <input type="radio" id="answer2-3" name="question4" value="B" th:text="${questionList[3].getAnswer2()}">
             </label><br>
             <label for="answer3-3">
-                <input type="radio" id="answer3-3" name="question4" value="C"  th:text="${questionList[3].getAnswer3()}">
+                <input type="radio" id="answer3-3" name="question4" value="C" th:text="${questionList[3].getAnswer3()}">
             </label><br>
         </div>
         <div class="question-box">
@@ -65,10 +65,10 @@
                 <input type="radio" id="answer1-4" name="question5" value="A" th:text="${questionList[4].getAnswer1()}">
             </label><br>
             <label for="answer2-4">
-                <input type="radio" id="answer2-4" name="question5" value="B"  th:text="${questionList[4].getAnswer2()}">
+                <input type="radio" id="answer2-4" name="question5" value="B" th:text="${questionList[4].getAnswer2()}">
             </label><br>
             <label for="answer3-4">
-                <input type="radio" id="answer3-4" name="question5" value="C"  th:text="${questionList[4].getAnswer3()}">
+                <input type="radio" id="answer3-4" name="question5" value="C" th:text="${questionList[4].getAnswer3()}">
             </label><br>
         </div>
         <input id="check-button" type="submit" value="SPRAWDŹ">

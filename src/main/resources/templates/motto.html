@@ -6,15 +6,15 @@
     <link rel="stylesheet" type="text/css" href="../css/motto.css">
 </head>
 <body>
-    <div id="main-container">
-        <form method="get" th:action="@{/client/motto}" th:object="${motto}">
-            <p th:text="*{getContent()}" style="font-size: 25px; text-align: center;"></p>
-            <p th:text="*{getAuthor()}" style="font-weight: bold; font-size: 18px;"></p>
-            <input id="motto-button" type="submit" value="NOWE MOTTO">
-        </form>
-        <form method="get" th:action="@{/client}">
-            <input id="menu-button" type="submit" value="MENU" >
-        </form>
-    </div>
+<div id="main-container">
+    <form method="get" th:action="@{/client/motto}" th:object="${motto}">
+        <p th:text="*{getContent()}" style="font-size: 25px; text-align: center;"></p>
+        <p th:text="*{getAuthor()}" style="font-weight: bold; font-size: 18px;"></p>
+        <input id="motto-button" type="submit" value="NOWE MOTTO">
+    </form>
+    <form method="get" th:action="@{/client}">
+        <input id="menu-button" type="submit" value="MENU">
+    </form>
+</div>
 </body>
 </html>

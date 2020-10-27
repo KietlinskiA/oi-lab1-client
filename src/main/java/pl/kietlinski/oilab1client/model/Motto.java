@@ -1,5 +1,4 @@
-
-package pl.kietlinski;
+package pl.kietlinski.oilab1client.model;
 
 import com.fasterxml.jackson.annotation.*;
 
@@ -8,9 +7,9 @@ import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "id",
-    "content",
-    "author"
+        "id",
+        "content",
+        "author"
 })
 public class Motto {
 

@@ -6,19 +6,19 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import pl.kietlinski.Motto;
+import pl.kietlinski.oilab1client.model.Motto;
 import pl.kietlinski.oilab1client.model.Question;
-import pl.kietlinski.oilab1client.service.ClientService;
+import pl.kietlinski.oilab1client.service.ClientServiceImpl;
 
 @Controller
 @RequestMapping("/client")
 public class ClientController {
 
-    private ClientService clientService;
+    private ClientServiceImpl clientServiceImpl;
 
     @Autowired
-    public ClientController(ClientService clientService) {
-        this.clientService = clientService;
+    public ClientController(ClientServiceImpl clientServiceImpl) {
+        this.clientServiceImpl = clientServiceImpl;
     }
 
     @GetMapping
@@ -28,14 +28,15 @@ public class ClientController {
 
     @GetMapping("/motto")
     public String getMotto(Model model) {
-        Motto mottoFromServer = clientService.getMottoFromServer();
+        Motto mottoFromServer = clientServiceImpl.getMottoFromServer();
         model.addAttribute("motto", mottoFromServer);
         return "motto";
     }
 
+
     @GetMapping("/quiz")
     public String getQuiz(Model model) {
-        Question[] quizFromServer = clientService.getQuizFromServer();
+        Question[] quizFromServer = clientServiceImpl.getQuizFromServer();
         model.addAttribute("questionList", quizFromServer);
         return "quiz";
     }
@@ -48,7 +49,7 @@ public class ClientController {
                       @RequestParam(required = false, defaultValue = "D") String question5,
                       Model model
     ) {
-        int quizResultFromSerwer = clientService.getQuizResultFromServer(question1, question2, question3, question4, question5);
+        int quizResultFromSerwer = clientServiceImpl.getQuizResultFromServer(question1, question2, question3, question4, question5);
         model.addAttribute("wynik", quizResultFromSerwer);
         return "result";
     }
